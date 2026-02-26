@@ -1,0 +1,29 @@
+### Sisteme Yeni Ogrenci Kaydetme Testi
+POST http://localhost:3000/api/kayit
+Content-Type: application/json
+
+{
+    "ad_soyad": "İsmet Güler",
+    "email": "ismet@erciyes.edu.tr",
+    "sifre": "cokgizlisifre123",
+    "rol": "ogrenci"
+}
+### Sisteme Giris Yapma ve Token Kaydetme Testi
+POST http://localhost:3000/api/giris
+Content-Type: application/json
+
+{
+    "email": "ismet@erciyes.edu.tr",
+    "sifre": "cokgizlisifre123",
+    "fcm_token": "TELEFONUN_ESSİZ_KİMLİGİ_BUNU_FLUTTER_VERECEK_TEST_123"
+}
+### Yeni Duyuru Paylasma Testi
+POST http://localhost:3000/api/duyuru-gonder
+Content-Type: application/json
+
+{
+    "baslik": "Sistem Bakimi",
+    "icerik": "Yarin oglen saatlerinde ogrenci isleri sisteminde kisa sureli bakim yapilacaktir.",
+    "gonderen_id": 1,
+    "hedef_rol": "ogrenci"
+}
